@@ -1,0 +1,8 @@
+INFO Server started on port 8080
+INFO User login request received
+WARNING High memory usage detected
+INFO Request completed in 120ms
+ERROR Database connection failed
+INFO Retrying database connection
+ERROR Database connection timeout
+INFO Server recovered

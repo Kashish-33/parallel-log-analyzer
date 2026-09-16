@@ -1,0 +1,6 @@
+INFO Payment request received
+INFO Payment validation completed
+ERROR Payment gateway unavailable
+WARNING Retry threshold approaching
+INFO Retry attempt started
+INFO Payment completed

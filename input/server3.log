@@ -1,0 +1,7 @@
+INFO Application startup complete
+WARNING Slow API response detected
+INFO GET /users completed
+INFO GET /documents completed
+ERROR Unexpected null value
+WARNING Cache miss rate is high
+INFO Worker completed
