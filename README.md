@@ -4,7 +4,7 @@ A Core Java project that analyzes multiple log files and compares sequential pro
 
 ## Why this project?
 
-The project demonstrates practical Core Java concepts without requiring Spring Boot, JDBC, a database, or external libraries.
+The project focuses on practical Core Java concepts such as file processing, collections, exception handling, and concurrent execution using a thread pool.
 
 ## Features
 
@@ -47,9 +47,10 @@ ParallelLogAnalyzer/
 ├── input/
 │   ├── server1.log
 │   ├── server2.log
-│   └── server3.log
-├── output/
-│   └── analysis-report.txt   # generated after running
+|   ├── server3.log
+│   └── server4.log
+|
+│
 ├── README.md
 └── .gitignore
 ```
@@ -126,28 +127,6 @@ input/
 ├── database.log
 └── server.log
 ```
-
-## Interview concepts demonstrated
-
-### Why multithreading?
-
-Different log files can be analyzed independently. This makes the workload suitable for concurrent processing.
-
-### Why ExecutorService?
-
-Creating and managing a new thread manually for every file can become difficult to manage. `ExecutorService` provides a reusable pool of worker threads and handles task execution.
-
-### Why Callable?
-
-`Runnable` does not return a result. Each log-processing task needs to return a `LogResult`, so `Callable<LogResult>` is a natural fit.
-
-### Why Future?
-
-The `Future` object represents the result of a submitted asynchronous task. The program calls `get()` when it needs the completed `LogResult`.
-
-### What happens if a task fails?
-
-The parallel processing code catches `ExecutionException` around `Future.get()`, while file-reading problems are handled by the parser.
 
 ## Complexity
 
